@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Sidebar menu With Sub-menus | Using HTML, CSS & JQuery</title>
+   <link rel="stylesheet" href="one.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+ </head>
+ <body>
+
+   <div class="menu-btn">
+     <i class="fas fa-bars"></i>
+   </div>
+   <div class="side-bar">
+     <div class="close-btn">
+       <i class="fas fa-times"></i>
+     </div>
+     <div class="menu">
+       <div class="item"><a href="#"><i class="fas fa-desktop"></i>Dashboard</a></div>
+       <div class="item">
+         <a class="sub-btn"><i class="fas fa-table"></i>Tables<i class="fas fa-angle-right dropdown"></i></a>
+         <div class="sub-menu">
+           <a href="#" class="sub-item">Sub Item 01</a>
+           <a href="#" class="sub-item">Sub Item 02</a>
+           <a href="#" class="sub-item">Sub Item 03</a>
+         </div>
+       </div>
+       <div class="item"><a href="#"><i class="fas fa-th"></i>Forms</a></div>
+       <div class="item">
+         <a class="sub-btn"><i class="fas fa-cogs"></i>Settings<i class="fas fa-angle-right dropdown"></i></a>
+         <div class="sub-menu">
+           <a href="#" class="sub-item">Sub Item 01</a>
+           <a href="#" class="sub-item">Sub Item 02</a>
+         </div>
+       </div>
+       <div class="item"><a href="#"><i class="fas fa-info-circle"></i>About</a></div>
+     </div>
+   </div>
+   <section class="main">
+     <h1>Sidebar Menu With<br>Sub-Menus</h1>
+   </section>
+
+   <script type="text/javascript">
+   $(document).ready(function(){
+
+     $('.sub-btn').click(function(){
+       $(this).next('.sub-menu').slideToggle();
+       $(this).find('.dropdown').toggleClass('rotate');
+     });
+
+     @
+     $('.menu-btn').click(function(){
+       $('.side-bar').addClass('active');
+       $('.menu-btn').css("visibility", "hidden");
+     });
+
+     $('.close-btn').click(function(){
+       $('.side-bar').removeClass('active');
+       $('.menu-btn').css("visibility", "visible");
+     });
+   });
+   </script>
+
+ </body>
+</html>
+
+
+
+
+
+<nav class="navbar" style="background-color:rgb(21, 21, 44)" >
+  <div class="">
+    <a class="" href="#"></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
+      aria-label="Toggle navigation"
+    >
+      <span style="color: #f0f2f5;font-size: 16px;"><i class="fa-solid fa-bars" style="color: #f0f2f5;"></i>   All</span>
+    </button>
+    
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div
+        class="offcanvas-header"
+        style="background-color: black; color: white" 
+      >
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="font-size: 1.6em; text-align: center;">
+          <i class="fa-light fa-user fa-beat"></i>Hello, SignIn</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body" >
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" style="font-size: 1.2em;"><b>Trending</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Best Seller</a>
+            <a class="nav-link" href="#">New Releases</a>
+            <a class="nav-link" href="#">Movers and Shakers</a>
+            <hr>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" style="font-size: 1.2em;"><b>Digital Content And Devices </b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Amazon Mini TV</a>
+            <a class="nav-link" href="#">Echo & Alexa</a>
+            <a class="nav-link" href="#">Fire TV</a>
+            <a class="nav-link" href="#">Kindle Books</a>
+            <a class="nav-link" href="#">Audible Audiobooks</a>
+            <a class="nav-link" href="#">Amazon Prime Video</a>
+            <a class="nav-link" href="#">Amazon Prime Music</a>
+            <hr>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" style="font-size: 1.2em;"><b>Digital Content And Devices </b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Amazon Mini TV</a>
+            <a class="nav-link" href="#">Echo & Alexa</a>
+            <a class="nav-link" href="#">Fire TV</a>
+            <a class="nav-link" href="#">Kindle Books</a>
+            <a class="nav-link" href="#">Audible Audiobooks</a>
+            <a class="nav-link" href="#">Amazon Prime Video</a>
+            <a class="nav-link" href="#">Amazon Prime Music</a>
+            <hr>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" style="font-size: 1.2em;"><b>Digital Content And Devices </b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Amazon Mini TV</a>
+            <a class="nav-link" href="#">Echo & Alexa</a>
+            <a class="nav-link" href="#">Fire TV</a>
+            <a class="nav-link" href="#">Kindle Books</a>
+            <a class="nav-link" href="#">Audible Audiobooks</a>
+            <a class="nav-link" href="#">Amazon Prime Video</a>
+            <a class="nav-link" href="#">Amazon Prime Music</a>
+            <hr>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="true"
+            >
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+   
+      <p class="box">Amazon Tv</p>
+      <p class="box">Sell</p>
+      <p class="box">Today's Deal</p>
+      <p class="box">Best seller</p>
+      <p class="box">Mobiles</p>
+      <p class="box">Electronics</p>
+      <p class="box">Coustomer Services</p>
+      <p class="box">Prime</p>
+      <p class="box">New_Releases</p>
+      <p class="box"> Shop deals in Electronics</p>
+    
+    </nav>
